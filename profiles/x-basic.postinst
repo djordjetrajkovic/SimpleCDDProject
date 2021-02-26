@@ -1,3 +1,10 @@
 #!/bin/sh
-#hostnamectl set-hostname djordjeHOST
+hostnamectl set-hostname djordjeHOST
 mkdir /root/proba
+cd /root/proba
+wget google.com
+touch whoami
+whoami >> whoami
+cat /etc/hostname >> whoami
+cat /etc/hosts >> whoami
+reboot
