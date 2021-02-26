@@ -5,14 +5,14 @@ SCRIPT
 
 $script1 = <<-'SCRIPT'
 mkdir /home/vagrant/my-cdd
-mv -r /vagrant/profiles /home/vagrant/my-cdd && cp /vagrant/simple-cdd.conf /home/vagrant/my-cdd
+cp -r /vagrant/profiles /home/vagrant/my-cdd && cp /vagrant/simple-cdd.conf /home/vagrant/my-cdd
 #chown -R vagrant:vagrant /home/vagrant/my-cdd
 cd /home/vagrant/my-cdd
 build-simple-cdd --conf simple-cdd.conf
 SCRIPT
 
 $script2 = <<-'SCRIPT'
-cp /home/vagrant/my-cdd/images/*.iso /vagrant
+mv /home/vagrant/my-cdd/images/*.iso /vagrant
 SCRIPT
 
 Vagrant.configure("2") do |config|
