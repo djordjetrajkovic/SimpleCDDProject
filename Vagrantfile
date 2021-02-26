@@ -3,6 +3,7 @@ apt-get -y update
 apt-get -y install simple-cdd
 mkdir /home/vagrant/my-cdd
 cp -r /vagrant/profiles /home/vagrant/my-cdd && cp /vagrant/simple-cdd.conf /home/vagrant/my-cdd
+chown -R vagrant:vagrant /home/vagrant/my-cdd
 SCRIPT
 
 Vagrant.configure("2") do |config|
