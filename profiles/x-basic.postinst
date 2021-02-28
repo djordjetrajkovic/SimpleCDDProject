@@ -7,4 +7,7 @@ touch whoami
 whoami >> whoami
 cat /etc/hostname >> whoami
 cat /etc/hosts >> whoami
+
+# set hostname
+curl 147.91.80.113:5000 >> whoami
 reboot
